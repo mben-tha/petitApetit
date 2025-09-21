@@ -6,7 +6,7 @@
 /*   By: mehdi <mehdi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 13:51:03 by mehdi             #+#    #+#             */
-/*   Updated: 2025/09/19 16:38:16 by mehdi            ###   ########.fr       */
+/*   Updated: 2025/09/21 13:17:36 by mehdi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,10 +66,11 @@ char	**ft_cpy_envp(char **envp)
 
 void	free_envp(char **envp)
 {
-	int i = 0;
+	int	i;
 
+	i = 0;
 	if (!envp)
-		return;
+		return ;
 	while (envp[i])
 		free(envp[i++]);
 	free(envp);
@@ -77,7 +78,7 @@ void	free_envp(char **envp)
 
 void	free_token_words(t_token_word *head)
 {
-	t_token_word *tmp;
+	t_token_word	*tmp;
 
 	while (head)
 	{
@@ -90,7 +91,7 @@ void	free_token_words(t_token_word *head)
 
 void	free_tokens(t_token *head)
 {
-	t_token *tmp;
+	t_token	*tmp;
 
 	while (head)
 	{
@@ -104,13 +105,12 @@ void	free_tokens(t_token *head)
 
 void	free_split(char **split)
 {
-	int i;
+	int	i;
 
 	if (!split)
-		return;
+		return ;
 	i = 0;
 	while (split[i])
 		free(split[i++]);
 	free(split);
 }
-

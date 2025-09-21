@@ -6,7 +6,7 @@
 /*   By: mehdi <mehdi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 12:53:09 by mehdi             #+#    #+#             */
-/*   Updated: 2025/09/19 16:48:16 by mehdi            ###   ########.fr       */
+/*   Updated: 2025/09/21 13:12:06 by mehdi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static void	process_input(char *input, char **env)
 	{
 		fprintf(stderr, "minishell: tokenize failed\n");
 		free(str);
-		return;
+		return ;
 	}
 	printf("%s\n", str);
 	free(str);

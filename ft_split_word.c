@@ -6,7 +6,7 @@
 /*   By: mehdi <mehdi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 12:12:44 by mben-tha          #+#    #+#             */
-/*   Updated: 2025/09/19 16:36:40 by mehdi            ###   ########.fr       */
+/*   Updated: 2025/09/21 13:11:46 by mehdi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static int	ft_countwords_word(const char *s)
 {
 	int		i;
 	int		count;
-	char 	quote;
+	char	quote;
 
 	i = 0;
 	count = 0;
@@ -39,7 +39,6 @@ static int	ft_countwords_word(const char *s)
 	}
 	return (count);
 }
-
 
 static int	ft_len_word_word(char const *s)
 {

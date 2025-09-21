@@ -6,7 +6,7 @@
 /*   By: mehdi <mehdi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/01 15:24:43 by mehdi             #+#    #+#             */
-/*   Updated: 2025/09/19 17:15:22 by mehdi            ###   ########.fr       */
+/*   Updated: 2025/09/21 13:21:16 by mehdi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ t_token	*new_node(t_token_word *word)
 	return (new);
 }
 
-int		fill_expandable(t_token_word *token)
+int	fill_expandable(t_token_word *token)
 {
 	char	*str;
 
@@ -99,13 +99,13 @@ char	*delete_quote(char *str)
 	char	*line;
 	int		i;
 	int		j;
-	
+
 	i = 1;
 	j = 0;
 	line = malloc(sizeof(char) * (ft_strlen(str) - 1));
 	if (!line)
 		return (NULL);
-	while (str[i+1])
+	while (str[i + 1])
 		line[j++] = str[i++];
 	line[j] = '\0';
 	return (line);

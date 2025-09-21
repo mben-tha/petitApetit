@@ -6,7 +6,7 @@
 /*   By: mehdi <mehdi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 12:53:16 by mehdi             #+#    #+#             */
-/*   Updated: 2025/09/19 17:34:20 by mehdi            ###   ########.fr       */
+/*   Updated: 2025/09/21 13:19:08 by mehdi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	handle_token_error(char **res, t_token **token)
 	return (1);
 }
 
-static t_token	*create_token(char *word, char **env, char **res, t_token **token)
+static t_token	*create_tok(char *word, char **env, char **res, t_token **token)
 {
 	t_token_word	*new_word;
 	t_token			*new;
@@ -56,7 +56,7 @@ int	tokenize_line(t_token **token, char *str, char **env)
 	i = 0;
 	while (res[i])
 	{
-		new = create_token(res[i], env, res, token);
+		new = create_tok(res[i], env, res, token);
 		if (!new)
 			return (1);
 		add_back(token, new);
@@ -65,7 +65,6 @@ int	tokenize_line(t_token **token, char *str, char **env)
 	free_split(res);
 	return (0);
 }
-
 
 // int	tokenize_line(t_token **token, char *str, char **env)
 // {
